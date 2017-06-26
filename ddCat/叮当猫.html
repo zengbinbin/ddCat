@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>叮当猫</title>
+    <link rel="stylesheet" href="css/cat.css" type="text/css" />
+</head>
+<body>
+<div id="d1"></div>
+<div id="click1">click me</div>
+      <!--背景图片-->
+     <div id="bgc">
+         <!--脸325*295-->
+         <div class="face">
+             <!--内脸-->
+             <div class="face_center">
+                 <!--鼻子-->
+                 <div class="nose"></div>
+                 <!--大胡须-->
+                 <div class="hx">
+                     <div class="hx1">
+                         <div class="hxs h1"></div>
+                     </div>
+                     <div class="hx2">
+                         <div class="hxs h2"></div>
+                     </div>
+                 </div>
+                 <!--鼻子下的竖线-->
+                 <div class="nose_line"></div>
+                 <!--笑-->
+                 <div class="smile"></div>
+             </div>
+             <!--眼睛-->
+             <div class="eyes">
+                 <!--左眼睛-->
+                 <div class="eye_left">
+                          <!--眼睛上半圆-->
+                     <div class="eye_top"></div>
+                          <!--眼睛中间矩形-->
+                     <div class="eye_center">
+                           <!--左眼球-->
+                         <div class="eyes_crl eyes_crl_left"></div>
+                     </div>
+                          <!--眼睛下半圆-->
+                     <div class="eye_bottom"></div>
+                 </div>
+                  <!--右眼睛-->
+                 <div class="eye_right">
+                          <!--眼睛上半圆-->
+                     <div class="eye_top"></div>
+                          <!--眼睛中间矩形-->
+                     <div class="eye_center">
+                           <!--右眼球-->
+                         <div class="eyes_crl eyes_crl_right"></div>
+                     </div>
+                          <!--眼睛下半圆-->
+                     <div class="eye_bottom"></div>
+                 </div>
+             </div></div>
+             <!--红色围巾-->
+         <div class="red"></div>
+             <!--铃铛-->
+         <div class="ld">
+             <div class="line1"></div>
+             <div class="line2"></div>
+             <div class="cricle"></div>
+             <div class="cricle_line"></div>
+         </div>
+             <!--身体下部-->
+         <div class="border">
+             <!--大口袋-->
+             <div class="big_bag">
+                 <!--小口袋-->
+                 <div class="small_bag_left"></div>
+                 <div class="small_bag_right"></div>
+             </div>
+             <div class="kc"></div>
+         </div>
+          <!--左手臂-->
+         <div class="hands_bi_left"></div>
+         <!--左手臂-->
+         <div class="hands_bi_right"></div>
+         <!--左手爪-->
+         <div class="hands_left"></div>
+         <!--右手爪-->
+         <div class="hands_right"></div>
+         <!--左脚-->
+         <div class="foot_left"></div>
+         <!--右脚-->
+         <div class="foot_right"></div>
+     </div>
+      <script type="text/javascript">
+          window.onload=function(){
+              var d1=document.getElementById("d1");
+              document.onmousemove=function(event){
+                  event=event||window.event;
+                  var x=event.clientX;
+                  var y=event.clientY;
+                  d1.innerHTML="x："+x+",y:"+y;
+              }
+          }; //end window
+      </script>
+</body>
+</html>

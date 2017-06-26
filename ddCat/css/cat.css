@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #EBEBEB;
+}
+
+/*d1*/
+#d1{
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+    position: fixed;
+    text-align: center;
+    line-height: 100px;
+    font-size:10px;
+    border:1px solid greenyellow;
+}
+/*背景图片*/
+#bgc {
+    margin: 2px auto;
+    width: 400px;
+    height: 600px;
+    background-color: #EBEBEB;
+    position: relative;
+}
+/*脸部的样式*/
+.face{
+    width: 325px;
+    height: 295px;
+    background-color: #0eadd7;
+    position: absolute;
+    border-radius: 290px;
+    border: 1px solid black;
+    left:40px;
+    top:5px;
+    /*// box-shadow: 0 0 30px 0 whitesmoke inset;*/
+    box-shadow: -10px 10px 20px 10px #888888,10px -20px 50px 5px whitesmoke;
+}
+/*内脸*/
+.face_center{
+    width: 270px;
+    height: 220px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 100%;
+    position: absolute;
+    top:75px;
+    left:28px;
+
+}
+/*眼睛*/
+.eyes{
+    width: 150px;
+    height:90px;
+    position: absolute;
+    top:25px;
+    left:88px;
+
+}
+/*左眼和右眼的样式*/
+.eye_left,.eye_right{
+    width:73px;
+    height:90px;
+    float: left;
+}
+/*眼睛上、中、下的公共样式*/
+.eye_top,.eye_bottom,.eye_center{
+    width:70px;
+    background-color: white;
+}
+.eye_top,.eye_bottom{
+    height:30px;
+}
+.eye_center{
+    height:25px;
+}
+/*眼睛的上半圆*/
+.eye_top{
+    border-radius: 73px 73px 0 0;
+    border: 1px solid black;
+    border-bottom: 0 solid;
+}
+/*眼睛中间的矩形*/
+.eye_center{
+    border-left:1px solid black;
+    border-right: 1px solid black;
+    position: relative;
+}
+/*眼球*/
+.eyes_crl{
+    width: 15px;
+    height:15px;
+    background-color: black;
+    border-radius: 100%;
+}
+@keyframes ani {
+    0%{
+        background-color:  black;left:55px;top:15px;
+    }
+    25%{
+        background-color: black;left:55px;top:0px;
+    }
+    50%{
+        background-color: black;left:0px;top:0px;
+    }
+    75%{
+        background-color: black;left:0px;top:25px;
+    }
+    100%{
+        background-color: black;left:55px;top:15px;
+    }
+
+}
+.eyes_crl_left,.eyes_crl_right,.nose,.hx,.nose_line,.smile,.ld,.big_bag{
+    position: absolute;
+}
+/*左眼球*/
+.eyes_crl_left{
+    right:10px;
+    top:15px;
+    animation:ani 2s infinite;
+}
+/*右眼球*/
+.eyes_crl_right{
+    left:10px;
+    top:15px;
+    animation:ani 2s infinite;
+
+}
+
+/*眼睛的下半圆*/
+.eye_bottom{
+    border-radius:  0 0 73px 73px;
+    border: 1px solid black;
+    border-top: 0 solid;
+}
+/*鼻子*/
+.nose{
+    width: 30px;
+    height:32px;
+    background-color: #df0b0b;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 0 0 15px 0 black inset,0 0 1px 0 white inset,90px -100px 50px 5px white;;
+    top:23px;
+    left:116px;
+    z-index:2;
+}
+/*胡须*/
+.hx{
+    width:224px;
+    height:75px;
+    left:23px;
+    top:50px;
+}
+/*hx1是左边胡须，hx2右边胡须*/
+.hx1,.hx2{
+    width:110px;
+    height:75px;
+    float: left;
+
+}
+.hx1,.hx2{
+    position: relative;
+}
+/*左胡须*/
+.h1{
+    width:55px;
+    height:1px;
+    background-color: black;
+    margin-top:38px;
+}
+/*左边的三根胡须*/
+.h1:before,.h1:after,.h2:before,.h2:after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 60px;
+    background-color: #000;
+    position: absolute;
+    z-index:3;
+}
+/*使用伪类:before做第一根胡须*/
+.h1:before{
+    transform: rotate(30deg);
+    left: -2px;
+    top: 15px;
+}
+/*使用伪类:before做第二根胡须*/
+.h1:after{
+    transform: rotate(-30deg);
+    left: -2px;
+    top: 60px;
+}
+/*右边胡须*/
+.h2{
+    width:55px;
+    height:1px;
+    background-color: black;
+    margin-top:38px;
+    float: right;
+}
+/*使用伪类:before做第一根胡须*/
+.h2:before{
+    transform: rotate(-210deg);
+    left: 50px;
+    top: 15px;
+}
+/*使用伪类:before做第二根胡须*/
+.h2:after{
+    transform: rotate(28deg);
+    position: absolute;
+    left: 50px;
+    top: 60px;
+}
+/*鼻子下的竖线*/
+.nose_line{
+    width:1px;
+    height:123px;
+    background-color: black;
+    left:131px;
+    top:54px;
+}
+/*笑脸*/
+.smile{
+    width:167px;
+    height:100px;
+    border-radius: 100%;
+    border-bottom: 1px solid black;
+    top:77px;
+    left:48px;
+}
+/*红围巾*/
+.red{
+    width: 225px;
+    height: 25px;
+    background-color: #9d2107;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 0 black inset;
+    top:270px;
+    left:90px;
+    z-index: 2;
+}
+/*铃铛*/
+.ld{
+    width:40px;
+    height:45px;
+    background-color: #dcd219;
+    box-shadow: 0 0 10px 0 #000000 inset;
+    border-radius: 100%;
+    left:180px;
+    top:276px;
+    z-index:4;
+    box-shadow: -3px 2px 10px 1px #888888;
+}
+.line1{
+    width:38px;
+    height:3px;
+    background-color: black;
+    margin-top: 10px;
+    box-shadow: 0 0 2px 0 #bebebe inset;
+}
+.line2{
+    width:38px;
+    height:3px;
+    background-color: black;
+    margin-top: 2px;
+    box-shadow: 0 0 2px 0 #bebebe inset;
+}
+/*铃铛内的小球*/
+.cricle{
+    width:17px;
+    height:15px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 11px;
+    box-shadow: 0 0 2px 0 #bebebe inset,13px -17px 15px 1px white;;
+
+}
+/*铃铛下的竖线*/
+.cricle_line{
+    width:2px;
+    height:8px;
+    background-color:black;
+    margin-left:18px;
+    box-shadow: 0 0 2px 0 #bebebe inset;
+}
+/*身体*/
+.border{
+    width: 225px;
+    height: 175px;
+    background-color:#0eadd7;
+    position: relative;
+    border: 1px solid black;
+    top:265px;
+    left:90px;
+    z-index: 0;
+    box-shadow: -15px 5px 10px 1px #888888;
+}
+/*大口袋*/
+.big_bag{
+    width:175px;
+    height:160px;
+    background-color: white;
+    border-radius: 100%;
+    top:-20px;
+    left:24px;
+    border: 1px solid black;
+}
+/*小口袋*/
+.small_bag_left,.small_bag_right{
+    width:70px;
+    height:60px;
+    border: 1px solid black;
+    float: left;
+    margin-top: 75px;
+
+}
+/*左边的小口袋*/
+.small_bag_left{
+    margin-left: 15px;
+    border-radius: 0 0 0 100%;
+    border-right:1px solid white;
+}
+/*右边的小口袋*/
+.small_bag_right{
+    border-radius: 0 0 100% 0;
+    border-left:1px solid white;
+}
+/*左手抓*/
+.hands_left,.hands_right{
+    width: 65px;
+    height:60px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+.hands_left:hover{
+    animation: anim1 2s infinite,anim2 2s infinite;
+}
+/*左手爪*/
+.hands_left{
+    position: relative;
+    top:97px;
+    left:0;
+    animation: anim1 2s infinite;
+}
+@keyframes anim1{
+    0%{
+        left:0;
+        top:97px;
+    }
+
+    50%{
+        left:0;
+        top:60px;
+    }
+
+    100%{
+        left:5px;
+        top:105px;
+    }
+}
+/*右手爪*/
+.hands_right{
+    position: relative;
+    top:30px;
+    left:333px;
+}
+
+
+/**手臂样式**/
+.hands_bi_left,.hands_bi_right{
+    width:50px;
+    height:80px;
+    background-color:#0eadd7;
+    position:absolute;
+    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
+    border-radius: 20%;
+}
+/*左手臂*/
+.hands_bi_left{
+    transform: rotate(62deg);
+    top:268px;
+    left:56px;
+    animation:hands 2s infinite;
+}
+/*右手臂*/
+.hands_bi_right{
+    transform: rotate(-69deg);
+    top:266px;
+    left:304px;
+}
+/*左手动画*/
+@keyframes  hands{
+    0%{
+        transform: rotate(62deg);
+    }
+
+    50%{
+        transform: rotate(110deg);
+    }
+
+    100%{
+        transform: rotate(50deg);
+    }
+
+}
+
+.foot_left,.foot_right{
+    width: 133px;
+    height:33px;
+    position:absolute ;
+    background-color: white;
+    border:1px solid black ;
+    box-shadow: -10px 1px 10px 1px #888888;
+}
+.foot_left{
+    left:60px;
+    top:465px;
+    border-radius: 30px 28px 46px 39px;
+}
+.foot_right{
+    left:206px;
+    top:465px;
+    border-radius: 30px 28px 46px 39px;
+
+}
+.kc{
+    width:40px;
+    height:65px;
+    background-color: #EBEBEB;
+    position: absolute;
+    top:167px;
+    left:92px;
+    border-radius: 50%;
+    border-top: 1px solid black;
+    z-index: -1;
+}
